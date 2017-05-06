@@ -43,6 +43,10 @@ plt.axis([140, 190, 45, 75])
 plt.xlabel('Height (cm)')
 plt.ylabel('Weight (kg)')
 plt.show()
-
 # w =  [[-33.73541021]
 # [  0.55920496]]
+
+y1 = w_1*155 + w_0
+y2 = w_1*160 + w_0
+print( u'Predict weight of person with height 155 cm: %.2f (kg), real number: 52 (kg)'  %(y1) )
+print( u'Predict weight of person with height 160 cm: %.2f (kg), real number: 56 (kg)'  %(y2) )
