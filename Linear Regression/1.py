@@ -50,3 +50,17 @@ y1 = w_1*155 + w_0
 y2 = w_1*160 + w_0
 print( u'Predict weight of person with height 155 cm: %.2f (kg), real number: 52 (kg)'  %(y1) )
 print( u'Predict weight of person with height 160 cm: %.2f (kg), real number: 56 (kg)'  %(y2) )
+
+# Sử dụng thư viện scikit-learn
+from sklearn import datasets, linear_model
+
+# Fit the model by Linear Regression
+regr = linear_model.LinearRegression(fit_intercept=False)   # fit_intercept=False for caculating the bias
+regr.fit(Xbar, y)
+
+# Compare two result
+print( 'Solution found by scikit-learn  : ', regr.coef_ )
+print( 'Solution found by (5): ', w.T)
+
+# Solution found by scikit-learn  :  [[  -33.73541021 0.55920496]]
+# Solution found by (5):  [[  -33.73541021 0.55920496 ]]
